@@ -14,3 +14,5 @@ DB_HOST = 'localhost' #https://dev.to/balt1794/postgresql-port-5432-already-in-u
 DB_USER = 'postgres'
 DB_PASS = 'password'
 DB_NAME = 'app'
+
+BREAKOUT_SYMBOLS = ['KGC', 'JNUG', 'FLNC', 'QLYS', 'VTRS', 'VIPS', 'SILV', 'SIG']
