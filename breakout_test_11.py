@@ -1,0 +1,148 @@
+import config, requests
+import tulipy, numpy
+import alpaca_trade_api as tradeapi
+from datetime import datetime
+from alpaca_trade_api.rest import TimeFrame, TimeFrameUnit
+from helpers import calculate_quantity
+import pytz
+import yfinance as yf
+
+symbols = config.BREAKOUT_SYMBOLS
+
+current_date = datetime.now(pytz.timezone('America/New_York')).date().isoformat()
+current_time = datetime.now(pytz.timezone('America/New_York')).strftime("%H:%M:%S")
+api = tradeapi.REST(config.API_KEY, config.SECRET_KEY, base_url=config.API_URL)
+
+positions = api.list_positions()
+existing_position_symbols = [position.symbol for position in positions]
+print(current_time)
+
+for symbol in symbols:
+    print(symbol)
+
+    ticker = yf.Ticker(symbol)
+    minute_5_bars = ticker.history(interval='5m',period='5d')#start=current_date, end=current_date)
+    minute_15_bars = ticker.history(interval='15m',period='5d')
+    minute_60_bars = ticker.history(interval='60m',period='1mo')
+
+    closes_5m = numpy.array(minute_5_bars['Close'])
+    closes_15m = numpy.array(minute_15_bars['Close'])
+    closes_60m = numpy.array(minute_60_bars['Close'])
+
+    short_period = 12
+    long_period = 26
+    signal_period = 9
+    decimal_point = 4
+
+    (M_60m_all, S_60m_all, H_60m_all) = tulipy.macd(numpy.array(closes_60m), short_period=short_period , long_period=long_period, signal_period=signal_period)      
+    M_60m_C0 = round(M_60m_all[-1], decimal_point)
+    M_60m_P1 = round(M_60m_all[-2], decimal_point)
+    M_60m_P2 = round(M_60m_all[-3], decimal_point)
+    M_60m_P3 = round(M_60m_all[-4], decimal_point)
+    H_60m_C0 = round(H_60m_all[-1], decimal_point)
+    H_60m_P1 = round(H_60m_all[-2], decimal_point)
+    H_60m_P2 = round(H_60m_all[-3], decimal_point)
+    H_60m_P3 = round(H_60m_all[-4], decimal_point)
+
+
+    (M_15m_all, S_15m_all, H_15m_all) = tulipy.macd(numpy.array(closes_15m), short_period=short_period , long_period=long_period, signal_period=signal_period)
+    M_15m_C0 = round(M_15m_all[-1], decimal_point)
+    M_15m_P1 = round(M_15m_all[-2], decimal_point)
+    M_15m_P2 = round(M_15m_all[-3], decimal_point)
+    M_15m_P3 = round(M_15m_all[-4], decimal_point)
+    H_15m_C0 = round(H_15m_all[-1], decimal_point)
+    H_15m_P1 = round(H_15m_all[-2], decimal_point)
+    H_15m_P2 = round(H_15m_all[-3], decimal_point)
+    H_15m_P3 = round(H_15m_all[-4], decimal_point)
+    limit = -0.0032
+
+    (M_5m_all, S_5m_all, H_5m_all) = tulipy.macd(numpy.array(closes_5m), short_period=short_period , long_period=long_period, signal_period=signal_period)
+    M_5m_C0 = round(M_5m_all[-1], decimal_point)
+    M_5m_P1 = round(M_5m_all[-2], decimal_point)
+    M_5m_P2 = round(M_5m_all[-3], decimal_point)
+    M_5m_P3 = round(M_5m_all[-4], decimal_point)
+    H_5m_C0 = round(H_5m_all[-1], decimal_point)
+    H_5m_P1 = round(H_5m_all[-2], decimal_point)
+        
+    if symbol not in existing_position_symbols:
+
+        # Strategy 1
+        if M_60m_P1 > 0 and M_60m_P1 > M_60m_P2 and M_60m_P2 > M_60m_P3:
+            if M_15m_P1 > 0 and H_15m_P1 > limit and H_15m_P2 > limit and H_15m_P3 > limit: 
+                if H_5m_C0 > 0.01 and H_5m_P1 < 0:
+                    print(f" - It's buy signal for Strategy 1.")
+                    
+                    market_price = round(closes_5m[-1], 1)
+                    quantity = calculate_quantity(market_price)
+                    print(f" - Placing buy order for {symbol} at {market_price}.\n")
+
+                    try:
+                        api.submit_order(
+                            symbol=symbol,
+                            side='buy',
+                            type='market',
+                            qty=quantity,
+                            time_in_force='gtc'
+                        )
+                    except Exception as e:
+                        print(f"Could not submit order {e}")            
+
+                else:
+                    print(" - 5m conditions do not pass for Strategy 1\n")
+            else:
+                print(" - 15m conditions do not pass for Strategy 1\n")
+
+        # Strategy 2
+        elif H_60m_C0 > H_60m_P1 and H_60m_P1 > H_60m_P2 and H_60m_P2 > H_60m_P3:
+            if M_15m_P1 < 0 and M_15m_P1 > -0.1 and M_15m_P1 > M_15m_P2 and M_15m_P2 > M_15m_P3: 
+                if M_5m_C0 > 0 and M_5m_C0 > M_5m_P1 and M_5m_P1 > M_5m_P2:
+                    print(f" - It's buy signal for Strategy 2.")
+
+                    market_price = round(closes_5m[-1], 1)
+                    quantity = calculate_quantity(market_price)
+                    print(f" - Placing buy order for {symbol} at {market_price}.\n")
+
+                    try:
+                        api.submit_order(
+                            symbol=symbol,
+                            side='buy',
+                            type='market',
+                            qty=quantity,
+                            time_in_force='gtc'
+                        )
+                    except Exception as e:
+                        print(f"Could not submit order {e}")            
+                else:
+                    print(" - 5m conditions do not pass for Strategy 2\n")
+            else:
+                print(" - 15m conditions do not pass for Strategy 2\n")
+
+        else:
+            print(" - 60m conditions do not pass for Stratergy 1 and 2\n")
+
+
+    elif symbol in existing_position_symbols:
+        print(f" - Already in the position")
+
+        # Strategy 1 for sell
+        if (H_5m_C0 < 0 and H_5m_P1 > 0) or H_5m_C0 < 0:
+            print(f" - It's sell signal.")
+
+            position = api.get_position(symbol)
+            quantity= position.qty
+            market_price = round(closes_5m[-1], 1)
+            print(f" - Placing sell order for {symbol} at {market_price}.\n")
+
+            try:
+                api.submit_order(
+                    symbol=symbol,
+                    side='sell',
+                    type='market',
+                    qty=quantity,
+                    time_in_force='gtc'
+                )
+            except Exception as e:
+                print(f" - --- ERROR --- Could not submit order: {e} --- ERROR ---\n")
+
+        else:
+            print(" - No sell signal yet\n")
