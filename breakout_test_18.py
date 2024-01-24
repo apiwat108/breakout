@@ -127,7 +127,7 @@ for symbol in symbols:
         # Strategy 1 Based on MCA Model Breakout on 18 Dec and Buy Signal on 20 Dec
         # 60m uptrend with limit of retrace and bullsish reversal candlestick pattern (Bullish Engulfing and One White Soldier)
             # Added Continuous green candelstick for more 60-m strategy
-        if H_60m_C0 > limit_60m_H and 75.0 > RSI_60m_C0 > 50.0: # Could add Bullish Engulfing or One White Soldier
+        if H_60m_C0 > limit_60m_H and C_60m_C0 > C_60m_P1 and 75.0 > RSI_60m_C0 > 50.0: # Could add Bullish Engulfing or One White Soldier
 
             # 15m Case-1: MACD x up Signal sync with 5m TF
             if H_15m_P1 < 0.00 and H_15m_C0 > 0.00 and 75.0 > RSI_15m_C0 > 55.0 and limit_15m_min_M < M_15m_C0 < limit_15m_max_M: # Bullish Engulfing
