@@ -44,14 +44,14 @@ for symbol in symbols:
     decimal_point = 4
 
     # Candle Stick
-    C_60m_C0 = round(closes_60m[-1], decimal_point)
-    O_60m_C0 = round(opens_60m[-1], decimal_point)
-    H_60m_C0 = round(highs_60m[-1], decimal_point)
-    L_60m_C0 = round(lows_60m[-1], decimal_point)
-    C_60m_P1 = round(closes_60m[-2], decimal_point)
-    O_60m_P1 = round(opens_60m[-2], decimal_point)
-    H_60m_P1 = round(highs_60m[-2], decimal_point)
-    L_60m_P1 = round(lows_60m[-2], decimal_point)
+    C_60m_C0 = closes_60m[-1]
+    O_60m_C0 = opens_60m[-1]
+    H_60m_C0 = highs_60m[-1]
+    L_60m_C0 = lows_60m[-1]
+    C_60m_P1 = closes_60m[-2]
+    O_60m_P1 = opens_60m[-2]
+    H_60m_P1 = highs_60m[-2]
+    L_60m_P1 = lows_60m[-2]
 
     print(f'C_60m_C0 = {C_60m_C0}')
     print(f'O_60m_C0 = {O_60m_C0}')
