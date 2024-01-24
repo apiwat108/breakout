@@ -34,8 +34,10 @@ for symbol in symbols:
     # opens_15m = numpy.array(minute_15_bars['Open'])
     # highs_15m = numpy.array(minute_15_bars['High'])
     # lows_15m = numpy.array(minute_15_bars['Low'])
-    # closes_60m = numpy.array(minute_60_bars['Close'])
-    # opens_60m = numpy.array(minute_60_bars['Open'])
+    closes_60m = numpy.array(minute_60_bars['Close'])
+    opens_60m = numpy.array(minute_60_bars['Open'])
+    print(closes_60m)
+    print(opens_60m)
     # highs_60m = numpy.array(minute_60_bars['High'])
     # lows_60m = numpy.array(minute_60_bars['Low'])
 
@@ -45,8 +47,9 @@ for symbol in symbols:
     # decimal_point = 4
 
     # # Candle Stick
-    # C_60m_C0 = closes_60m[-1]
-    # O_60m_C0 = opens_60m[-1]
+    C_60m_C0 = closes_60m[-1]
+    O_60m_C0 = opens_60m[-1]
+    print(C_60_C0, O_60m_C0)
     # H_60m_C0 = highs_60m[-1]
     # L_60m_C0 = lows_60m[-1]
     # C_60m_P1 = closes_60m[-2]
