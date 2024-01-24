@@ -49,7 +49,7 @@ for symbol in symbols:
     # # Candle Stick
     C_60m_C0 = closes_60m[-1]
     O_60m_C0 = opens_60m[-1]
-    print(C_60_C0)
+    print(C_60m_C0, O_60m_C0)
     # H_60m_C0 = highs_60m[-1]
     # L_60m_C0 = lows_60m[-1]
     # C_60m_P1 = closes_60m[-2]
