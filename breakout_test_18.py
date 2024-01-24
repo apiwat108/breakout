@@ -272,10 +272,10 @@ for symbol in symbols:
 
         else:
             print(" - 60m conditions do not pass for Stratergy 1\n")
-            print(f'C_60m_C0 = {C_60m_C0}')
-            print(f'C_60m_P1 = {C_60m_P1}')
-            print(f'O_60m_C0 = {O_60m_C0}')
-            print(f'RSI_60m_C0 = {RSI_60m_C0}\n')
+            # print(f'C_60m_C0 = {C_60m_C0}')
+            # print(f'C_60m_P1 = {C_60m_P1}')
+            # print(f'O_60m_C0 = {O_60m_C0}')
+            # print(f'RSI_60m_C0 = {RSI_60m_C0}\n')
 
     elif symbol in existing_position_symbols:
         print(f" - Already in the position")
