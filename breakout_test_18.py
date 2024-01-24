@@ -22,11 +22,12 @@ for symbol in symbols:
 
     ticker = yf.Ticker(symbol)
     minute_5_bars = ticker.history(interval='5m',period='5d')#start=current_date, end=current_date)
-    print(minute_5_bars)
+    # print(minute_5_bars)
     # minute_15_bars = ticker.history(interval='15m',period='5d')
     # minute_60_bars = ticker.history(interval='60m',period='1mo')
 
-    # closes_5m = numpy.array(minute_5_bars['Close'])
+    closes_5m = numpy.array(minute_5_bars['Close'])
+    print(closes_5m)
     # opens_5m = numpy.array(minute_5_bars['Open'])
     # highs_5m = numpy.array(minute_5_bars['High'])
     # lows_5m = numpy.array(minute_5_bars['Low'])
