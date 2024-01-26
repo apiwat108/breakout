@@ -27,6 +27,18 @@ for symbol in symbols:
     minute_15_bars = ticker.history(interval='15m',period='5d')
     minute_60_bars = ticker.history(interval='60m',period='1mo')
 
+    most_updated_5m_close = minute_5_bars['Close'][-1]
+    minute_5_bars.loc[minute_5_bars.index[-2],'Close'] = most_updated_5m_close
+    minute_5_bars.drop(index=minute_5_bars.index[-1],axis=0,inplace=True)
+
+    most_updated_15m_close = minute_15_bars['Close'][-1]
+    minute_15_bars.loc[minute_15_bars.index[-2],'Close'] = most_updated_15m_close
+    minute_15_bars.drop(index=minute_15_bars.index[-1],axis=0,inplace=True)
+
+    most_updated_60m_close = minute_60_bars['Close'][-1]
+    minute_60_bars.loc[minute_60_bars.index[-2],'Close'] = most_updated_60m_close
+    minute_60_bars.drop(index=minute_60_bars.index[-1],axis=0,inplace=True)
+    
     macd = minute_5_bars.ta.macd()
     # macd = minute_15_bars.ta.macd()
     # macd = minute_60_bars.ta.macd()
