@@ -53,7 +53,7 @@ for symbol in symbols:
     rsi_5 = minute_5_bars.ta.rsi()
     rsi_15 = minute_15_bars.ta.rsi()
     rsi_60 = minute_60_bars.ta.rsi()
-    ema_60 = minute_60_bars.ta.ewm(span=10, adjust=False).mean()
+    ema_60 = minute_60_bars.ta.sma(10)
 
     # df = pd.concat([minute_5_bars['Close'], minute_5_bars['Open'], macd_5_bars['MACD_12_26_9'], rsi], axis=1)
     # print(df)
@@ -113,7 +113,7 @@ for symbol in symbols:
     RSI_15m_C0 = rsi_15[-1]
     RSI_60m_C0 = rsi_60[-1]
 
-    market_price = round(minute_5_bars['Close'], 2)
+    market_price = round(minute_5_bars['Close'][-1], 2)
 
     if symbol not in existing_position_symbols:
 
