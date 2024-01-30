@@ -15,6 +15,8 @@ current_date = datetime.now(pytz.timezone('America/New_York')).date().isoformat(
 current_time = datetime.now(pytz.timezone('America/New_York')).strftime("%H:%M:%S")
 api = tradeapi.REST(config.API_KEY, config.SECRET_KEY, base_url=config.API_URL)
 
+orders = api.list_orders(status='all', after=current_date)
+existing_order_symbols = [order.symbol for order in orders if order.status != 'canceled']
 positions = api.list_positions()
 existing_position_symbols = [position.symbol for position in positions]
 print(current_time)
@@ -115,7 +117,7 @@ for symbol in symbols:
 
     market_price = round(minute_5_bars['Close'][-1], 2)
 
-    if symbol not in existing_position_symbols:
+    if symbol not in existing_order_symbols:
 
         # Strategy 1 Based on MCA Model Breakout on 18 Dec and Buy Signal on 20 Dec
         # 60m uptrend with limit of retrace and bullsish reversal candlestick pattern (Bullish Engulfing and One White Soldier)
