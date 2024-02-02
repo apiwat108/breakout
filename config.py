@@ -15,4 +15,4 @@ DB_USER = 'postgres'
 DB_PASS = 'password'
 DB_NAME = 'app'
 
-BREAKOUT_SYMBOLS = ['FTEK', 'SLGN', 'TRIB', 'EW', 'AVIR', 'PRCT', 'JNPR', 'JVA', 'TACT', 'PNTG', 'EHC', 'UIS', 'VTEX', 'TW', 'SEM', 'QS', 'BXSL', 'AGIO', 'CLRO', 'FORA', 'ARMP', 'BTCS', 'BUR', 'FULC', 'NMIH', 'MRK', 'THM', 'SVV']
+BREAKOUT_SYMBOLS = ['EVG', 'FCEL', 'FMC', 'MO', 'NRBO', 'NSC', 'PTGX', 'SBH', 'THC', 'TREX', 'UGI', 'VSTO', 'BALL', 'APG', 'AWRE', 'APAM', 'CRON', 'CMS', 'CAVA', 'ALGM', 'ATRA', 'FTEK', 'SLGN', 'TRIB', 'EW', 'AVIR', 'PRCT', 'JNPR', 'JVA', 'EHC', 'VTEX', 'SEM', 'QS', 'AGIO', 'CLRO', 'FORA', 'BUR', 'FULC', 'NMIH', 'MRK', 'THM', 'SVV']
