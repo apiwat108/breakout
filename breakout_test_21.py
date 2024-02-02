@@ -30,6 +30,7 @@ if clock.is_open:
         print(symbol)
 
         ticker = yf.Ticker(symbol)
+
         minute_5_bars = ticker.history(interval='5m',period='5d')#start=current_date, end=current_date)
         minute_15_bars = ticker.history(interval='15m',period='5d')
         minute_60_bars = ticker.history(interval='60m',period='1mo')
@@ -60,8 +61,6 @@ if clock.is_open:
         rsi_5 = minute_5_bars.ta.rsi()
         rsi_15 = minute_15_bars.ta.rsi()
         rsi_60 = minute_60_bars.ta.rsi()
-        ema_60 = minute_60_bars.ta.sma(10)
-        # df.ta.ema(df['close'], length=14, offset=None, append=True)
 
         # df = pd.concat([minute_5_bars['Close'], minute_5_bars['Open'], macd_5_bars['MACD_12_26_9'], rsi], axis=1)
         # print(df)
@@ -116,13 +115,11 @@ if clock.is_open:
         limit_5m_M = 0.0200
         limit_5m_Max_Case_2_2 = 0.0800
 
-        E_60m_C0 = ema_60[-1]
         RSI_5m_C0 = rsi_5[-1]
         RSI_15m_C0 = rsi_15[-1]
         RSI_60m_C0 = rsi_60[-1]
 
         market_price = round(minute_5_bars['Close'][-1], 2)
-
 
         if symbol not in existing_order_symbols:
 
@@ -282,9 +279,13 @@ if clock.is_open:
                 entry_price = float(position.avg_entry_price)
                 market_value = abs(float(position.market_value))
                 cost = abs(float(position.cost_basis))
+
+                day_bars = ticker.history(interval='1d',period='1mo')
+                EMA_10d_bars = day_bars['Close'].ewm(span=10, adjust=False).mean()
+                EMA_10d = EMA_10d_bars[-1]
+
             except Exception as e:
                 print(f"The order may not be filled")
-
 
             # Strategy 1 for taking profit 1
             if market_value > (1.01 * cost):    # 0 < H_5m_C0 < H_5m_P1 < H_5m_P2 and H_5m_P2 > H_5m_P3 and M_5m_P2 > 0 and S_5m_P3 > 0:
@@ -303,7 +304,7 @@ if clock.is_open:
                     print(f" - --- ERROR --- Could not submit order: {e} --- ERROR ---\n")
 
             # Strategy 2 for cutting loss
-            elif market_price < E_60m_C0:
+            elif market_price < EMA_10d:
                 print(f" - It's cut-loss signal.")
                 print(f" - Placing sell order for {symbol} at {market_price}.\n")
 
@@ -323,6 +324,6 @@ if clock.is_open:
 
         else: 
             print(" - It's already been traded for today.\n")
-            
+
 else:
     print(f"The market is closed")
