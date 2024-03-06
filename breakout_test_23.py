@@ -642,7 +642,7 @@ if clock.is_open:
                                 SCF_5m_01C_02_01 = (H_5m_P1 - H_5m_C0)/H_5m_P1*100            
                                 SCF_5m_01C_02_01_threshold = 500
                                 if M_5m_C0 > M_5m_P1 > 0.0000 and H_5m_C0 > 0.0000 and H_5m_P1 < 0.0000 and SCF_5m_01C_02_01 > SCF_5m_01C_02_01_threshold:
-                                    print(f" - It's buy signal for BB_1 Strategy, Model_01C-01-01")
+                                    print(f" - It's buy signal for BB_1 Strategy, Model_01C-02-01")
                                     quantity = calculate_quantity(market_price)
                                     print(f" - Placing buy order for {symbol} at {market_price}.\n")
 
