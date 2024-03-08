@@ -16,4 +16,4 @@ DB_PASS = 'password'
 DB_NAME = 'app'
 
 BREAKOUT_SYMBOLS = ['NOK', 'PBH', 'VMD', 'LAB', 'BHVN', 'BGC', 'COHR', 'MGNX', 'FMC', 'NSC', 'PTGX', 'THC', 'TREX', 'UGI', 'VSTO', 'BALL', 'APG', 'APAM', 'CMS', 'CAVA', 'EW', 'JNPR', 'EHC', 'VTEX', 'SEM', 'AGIO', 'FULC', 'SVV']
-BB_SYMBOLS = ['L', 'EW', 'EHC', 'GSK', 'CP', 'PDI', 'RTX', 'ARMK', 'AIV', 'CDP', 'CSWC', 'HL', 'IGR', 'BKR', 'AMCR', 'ERIC', 'SERA', 'SUN', 'THC', 'CLH', 'BAH', 'GATX', 'MPC', 'WEBL', 'WOR', 'XLC', 'BFH', 'DOCN', 'BASE', 'DIS', 'BAH', 'CVLT', 'AMG', 'CG', 'FTNT']
+BB_SYMBOLS = ['L', 'EW', 'EHC', 'GSK', 'CP', 'PDI', 'RTX', 'ARMK', 'AIV', 'CDP', 'CSWC', 'HL', 'IGR', 'BKR', 'AMCR', 'ERIC', 'SERA', 'SUN', 'THC', 'CLH', 'GATX', 'MPC', 'WEBL', 'WOR', 'XLC', 'BFH', 'DOCN', 'BASE', 'DIS', 'BAH', 'CVLT', 'AMG', 'CG', 'FTNT']
