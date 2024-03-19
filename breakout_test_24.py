@@ -812,8 +812,8 @@ if clock.is_open:
                     print(f" - --- ERROR --- Could not submit order: {e} --- ERROR ---\n")
 
             # Strategy 3 for cutting loss should not greater than 2.5%
-            elif market_price < (0.975 * cost):
-                print(f" - It's cut-loss signal.")
+            elif market_value < (0.975 * cost):
+                print(f" - It's cut-loss signal (loss > 2.5%).")
                 print(f" - Placing sell order for {symbol} at {market_price}.\n")
 
                 try:
