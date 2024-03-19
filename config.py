@@ -17,4 +17,4 @@ DB_NAME = 'app'
 
 BREAKOUT_SYMBOLS = ['STLD', 'RTX', 'QNST', 'PFG', 'NOK', 'PBH', 'VMD', 'LAB', 'BHVN', 'BGC', 'FMC', 'NSC', 'THC', 'TREX', 'VSTO', 'APG', 'CAVA', 'EW', 'VTEX', 'SEM', 'FULC']
 
-BB_SYMBOLS = ['WOR', 'AAON', 'TNL', 'ATXS', 'SPRY', 'SDHC', 'SFM', 'NNOX', 'COOP', 'TRIP', 'GM', 'CAL', 'CMC', 'FGEN', 'BDTX', 'NBBK', 'DOG', 'CIM', 'STNE', 'SWI', 'ARI', 'NG', 'L', 'EHC', 'GSK', 'CP', 'PDI', 'RTX', 'ARMK', 'AIV', 'CDP', 'CSWC', 'HL', 'IGR', 'BKR', 'AMCR', 'ERIC', 'SERA', 'SUN', 'THC', 'CLH', 'GATX', 'MPC', 'WEBL', 'WOR', 'XLC', 'BFH', 'DOCN', 'BASE', 'DIS', 'BAH', 'CVLT', 'AMG', 'CG', 'FTNT']
+BB_SYMBOLS = ['MMYT', 'WOR', 'AAON', 'TNL', 'ATXS', 'SPRY', 'SDHC', 'SFM', 'NNOX', 'COOP', 'TRIP', 'GM', 'CAL', 'CMC', 'FGEN', 'BDTX', 'NBBK', 'DOG', 'CIM', 'STNE', 'SWI', 'ARI', 'NG', 'L', 'EHC', 'GSK', 'CP', 'PDI', 'RTX', 'ARMK', 'AIV', 'CDP', 'CSWC', 'HL', 'IGR', 'BKR', 'AMCR', 'ERIC', 'SERA', 'SUN', 'THC', 'CLH', 'GATX', 'MPC', 'WEBL', 'WOR', 'XLC', 'BFH', 'DOCN', 'BASE', 'DIS', 'BAH', 'CVLT', 'AMG', 'CG', 'FTNT']
