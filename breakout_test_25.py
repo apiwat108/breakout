@@ -801,7 +801,7 @@ if clock.is_open:
                 # Significant Cross-up Factor 60m 
                 # (LAB 1 Mar 2024: H_60m_C0(10:30) = 0.0163 > H_60m_P1(11:30) = 0.0063 --> SCF = 2.59)
                 # (FRPT 20 Mar 2024: H_60m_C0(13:30) = 0.0499 > H_60m_P1(12:30) = 0.0419 --> SCF = 1.19)
-                SCF_60m_01E = round(H_60m_P1/H_60m_P1, decimal_point)         
+                SCF_60m_01E = round(H_60m_C0/H_60m_P1, decimal_point)         
                 SCF_60m_01E_threshold = 1.10
                 print(f' - M_60m_C0 = {M_60m_C0} > 0.0000 and M_60m_P1 = {M_60m_P1} < 0.0000')
                 print(f' - H_60m_C0 = {H_60m_C0} > H_60m_P1 = {H_60m_P1} > 0.0000')
