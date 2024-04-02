@@ -796,29 +796,29 @@ if clock.is_open:
                 #         print(" - 15m conditions do not pass for Strategy 1\n")  
 
 
-                print(f" - Checking for Model_01E: 60m_MACD cross up 0-line") 
+                # print(f" - Checking for Model_01E: 60m_MACD cross up 0-line") 
 
                 # Significant Cross-up Factor 60m 
                 # (LAB 1 Mar 2024: H_60m_C0(10:30) = 0.0163 > H_60m_P1(11:30) = 0.0063 --> SCF = 2.59)
                 # (FRPT 20 Mar 2024: H_60m_C0(13:30) = 0.0499 > H_60m_P1(12:30) = 0.0419 --> SCF = 1.19)
                 SCF_60m_01E = round(H_60m_C0/H_60m_P1, decimal_point)         
                 SCF_60m_01E_threshold = 1.10
-                print(f' - M_60m_C0 = {M_60m_C0} > 0.0000 and M_60m_P1 = {M_60m_P1} < 0.0000')
-                print(f' - H_60m_C0 = {H_60m_C0} > H_60m_P1 = {H_60m_P1} > 0.0000')
-                print(f' - SCF_60m = {SCF_60m_01E} > SCF_60m_threshold = {SCF_60m_01E_threshold}')
+                # print(f' - M_60m_C0 = {M_60m_C0} > 0.0000 and M_60m_P1 = {M_60m_P1} < 0.0000')
+                # print(f' - H_60m_C0 = {H_60m_C0} > H_60m_P1 = {H_60m_P1} > 0.0000')
+                # print(f' - SCF_60m = {SCF_60m_01E} > SCF_60m_threshold = {SCF_60m_01E_threshold}')
 
                 # Model_01E: 60m_MACD cross up 0-line (LAB 1 Mar (10:30-11:30))
                 if M_60m_C0 > 0.0000 and M_60m_P1 < 0.0000 and H_60m_C0 > H_60m_P1 > 0.0000 and SCF_60m_01E > SCF_60m_01E_threshold:
 
-                    print(f" - Checking for Model_01E-01: 15m_MACD Keep Rising") 
+                    # print(f" - Checking for Model_01E-01: 15m_MACD Keep Rising") 
                     # Significant Breakout Factor 15m 
                     # (LAB 1 Mar 2024: H_15m_C0(11:30) = 0.0160 > H_15m_P1(11:15) = 0.0129 --> SBF = 1.24)
                     # (FRPT 20 Mar 2024: H_15m_C0(14:15) = 0.0237 > H_15m_P1(14:00) = 0.0121 --> SBF = 1.95 )
                     SBF_15m_01E_01 = round(H_15m_P1/H_15m_P1, decimal_point)         
                     SBF_15m_01E_01_threshold = 1.10
-                    print(f' - M_15m_C0 = {M_15m_C0} > M_15m_P1 = {M_15m_P1} > 0.0000')
-                    print(f' - H_15m_C0 = {H_15m_C0} > H_15m_P1 = {H_15m_P1} > 0.0000')                    
-                    print(f' - SBF_15m = {SBF_15m_01E_01} > SBF_15m_threshold = {SBF_15m_01E_01_threshold}')
+                    # print(f' - M_15m_C0 = {M_15m_C0} > M_15m_P1 = {M_15m_P1} > 0.0000')
+                    # print(f' - H_15m_C0 = {H_15m_C0} > H_15m_P1 = {H_15m_P1} > 0.0000')                    
+                    # print(f' - SBF_15m = {SBF_15m_01E_01} > SBF_15m_threshold = {SBF_15m_01E_01_threshold}')
 
                     # Model_01E-01: 15m_MACD Keep Rising (LAB 1 Mar 2024 (11:15-11:30): H_15m_C0(11:30) = 0.0160 > H_5m_P1(11:15) = 0.0129)
                     if  SBF_15m_01E_01 > SBF_15m_01E_01_threshold and M_15m_C0 > M_15m_P1 > 0.0000 and H_15m_C0 > H_15m_P1 > 0.0000 and C_15m_C0 > C_15m_P1 and C_15m_C0 > O_15m_C0:
