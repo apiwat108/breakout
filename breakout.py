@@ -103,12 +103,12 @@ if clock.is_open:
         # MAC is OK
         # Linux is waiting
 
-        print(f" - C_1d_P2 = {C_1d_P2},  C_1d_P1 = {C_1d_P1},  C_1d_C0 = {C_1d_C0}")
-        print(f" - H_1d_C0, M_1d_C0 = {H_1d_C0}, {M_1d_C0}")
-        print(f" - H_1d_P1, M_1d_P1 = {H_1d_P1}, {M_1d_P1}\n")
-        print(f" - C_60m_P2 = {C_60m_P2},  C_60m_P1 = {C_60m_P1},  C_60m_C0 = {C_60m_C0}")
-        print(f" - H_60m_C0, M_60m_C0 = {H_60m_C0}, {M_60m_C0}")
-        print(f" - H_60m_P1, M_60m_P1 = {H_60m_P1}, {M_60m_P1}\n")
+        # print(f" - C_1d_P2 = {C_1d_P2},  C_1d_P1 = {C_1d_P1},  C_1d_C0 = {C_1d_C0}")
+        # print(f" - H_1d_C0, M_1d_C0 = {H_1d_C0}, {M_1d_C0}")
+        # print(f" - H_1d_P1, M_1d_P1 = {H_1d_P1}, {M_1d_P1}\n")
+        # print(f" - C_60m_P2 = {C_60m_P2},  C_60m_P1 = {C_60m_P1},  C_60m_C0 = {C_60m_C0}")
+        # print(f" - H_60m_C0, M_60m_C0 = {H_60m_C0}, {M_60m_C0}")
+        # print(f" - H_60m_P1, M_60m_P1 = {H_60m_P1}, {M_60m_P1}\n")
 
         if symbol not in existing_position_symbols:
 
