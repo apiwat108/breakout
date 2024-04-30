@@ -17,6 +17,6 @@ DB_NAME = 'app'
 
 BREAKOUT_SYMBOLS_DX0 = ['ABR', 'CFLT', 'BEPC', 'NLY', 'ETWO', 'NAT', 'DBI', 'VICI', 'NWL', 'IONQ', 'PTCT', 'AGEN', 'LADR', 'HIW', 'LICN', 'SEER', 'ASAN', 'KC', 'NYT', 'MRUS', 'HCP', 'RBBN', 'SYF', 'ST', 'BEP', 'BFH', 'MCRB', 'LFST', 'SHOO', 'CYH', 'RXT', 'TRIP', 'TNL', 'UNIT', 'CDP', 'CORZ', 'RIOT', 'JOBY', 'AB', 'CGON', 'ORC', 'SLI', 'DAR', 'SHCR', 'NEO']
 
-BREAKOUT_SYMBOLS_DR1 = ['FOX', 'KDP', 'CTRA', 'HRL', 'KHC', 'CRK', 'AMPY', 'PUMP', 'VIRT', 'EQT', 'KRG', 'HUMA', 'ZIM', 'FITB', 'PFS', 'CUTR', 'MTTR', 'HWC', 'MO', 'AGBA', 'AY', 'POET', 'RILY', 'WEAT', 'ANVS', 'SNAP', 'ENB', 'HCP', 'ZUO', 'DFLI', 'SYF', 'ALGM', 'IRDM', 'UGI', 'FLO', 'ABVC', 'SMPL', 'CGEM', 'MOBX', 'AMBP', 'POR', 'CMRE', 'OZK']
+BREAKOUT_SYMBOLS_DR1 = ['EQT', 'KRG', 'HUMA', 'ZIM', 'FITB', 'PFS', 'CUTR', 'MTTR', 'HWC', 'MO', 'AGBA', 'AY', 'POET', 'RILY', 'WEAT', 'ANVS', 'SNAP', 'ENB', 'HCP', 'ZUO', 'DFLI', 'SYF', 'ALGM', 'IRDM', 'UGI', 'FLO', 'ABVC', 'SMPL', 'CGEM', 'MOBX', 'AMBP', 'POR', 'CMRE', 'OZK']
 
 BREAKOUT_SYMBOLS_DX1 = ['AUR', 'SG', 'TALO', 'AMRK', 'REAL', 'MGY', 'KGC', 'MUX', 'DBC', 'SMTC', 'LAUR', 'EXK', 'CVE', 'VET', 'AES', 'DOC', 'CRON', 'FXN', 'STOK', 'OPK', 'LU', 'SNDL', 'MUR', 'OII', 'MAG', 'CPG', 'OUST', 'ACVA', 'GSM', 'PWFL', 'EH', 'SAND', 'AG', 'AA', 'TH', 'HLX', 'BTE', 'EC', 'TTI', 'IE', 'CGC', 'FSM']
