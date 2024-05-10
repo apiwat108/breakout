@@ -126,7 +126,7 @@ if clock.is_open:
             if symbol not in existing_order_symbols:
 
                 # Model_5MX0: 
-                if M_5m_C0 > 0.0000 and M_5m_P1 < 0.0000 and M_15m_C0 > M_15m_P1 > 0.0000 and M_60m_C0 > M_60m_P1 > 0.0000 and H_60m_C0 > 0.0000:
+                if M_5m_C0 > 0.0000 and M_5m_P1 < 0.0000 and M_15m_C0 > M_15m_P1 and M_60m_C0 > M_60m_P1 > 0.0000 and H_60m_C0 > 0.0000:
 
                     # Check RSI and volume
                     if RSI_min < RSI_5m_C0 < RSI_max and RSI_min < RSI_15m_C0 < RSI_max and Vol_5m_C0 > Vol_threshold: 
