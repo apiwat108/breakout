@@ -15,6 +15,6 @@ DB_USER = 'postgres'
 DB_PASS = 'password'
 DB_NAME = 'app'
 
-BREAKOUT_SYMBOLS_5MX0_AB = ['HUT', 'CCCS', 'MIGI', 'AA', 'MYO', 'OHI', 'CGEN', 'LEU', 'CDE', 'DESP', 'STOK', 'NCLH', 'MTA', 'ARRY', 'DBC', 'ERAS', 'JKS', 'URG', 'MAG', 'IGMS', 'ORLA', 'DNN', 'BEAT', 'DRRX', 'GTES', 'HOOK', 'UEC']
+BREAKOUT_SYMBOLS_5MX0_AB = ['USM', 'HUT', 'CCCS', 'MIGI', 'AA', 'MYO', 'OHI', 'CGEN', 'LEU', 'CDE', 'DESP', 'STOK', 'NCLH', 'MTA', 'ARRY', 'DBC', 'ERAS', 'JKS', 'URG', 'MAG', 'IGMS', 'ORLA', 'DNN', 'BEAT', 'DRRX', 'GTES', 'HOOK', 'UEC']
 
 BREAKOUT_SYMBOLS_5MX0_BB = ['KAR', 'GERN', 'ACB', 'EXTR', 'AR', 'ERF', 'NG', 'RARE', 'DK', 'KRG', 'GM', 'RES', 'HAL', 'CNX', 'ALGM', 'AKR', 'CXAI', 'REI', 'NINE', 'EGY', 'OPK', 'CUTR', 'CSTM']
