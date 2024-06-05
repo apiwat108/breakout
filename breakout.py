@@ -763,7 +763,7 @@ if clock.is_open:
                 # Case-6: 60MX0 (Check Significant of 60MX0)
                 # Input: Breakout-8 (EPRT 31 May - 3 Jun 2024)
                 # Check Signal
-                if M_60m_C0 > 0.0000 and M_60m_P1 < 0.0000:
+                if M_60m_C0 > 0.0000 and M_60m_P1 < 0.0000 and H_60m_C0 > 0.0000:
                     
                     # No Significant Factors Check                  
                     print(f" - It's buy signal for Model 60MX0 Purely")         
