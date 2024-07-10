@@ -1,5 +1,5 @@
 import math
 
 def calculate_quantity(price):
-    quantity = math.floor(20000 / price)
+    quantity = math.floor(500 / price)
     return quantity
