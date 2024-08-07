@@ -15,6 +15,6 @@ DB_USER = 'postgres'
 DB_PASS = 'password'
 DB_NAME = 'app'
 
-BREAKOUT_SYMBOLS_5MX0_AB = ['VICI', 'ANGO', 'CPB', 'CYH', 'CDP', 'ELME', 'ASTL', 'TELL', 'AVTR', 'FULC', 'MRVI', 'PPC', 'IMXI', 'COMM', 'UNIT', 'MAT']
+BREAKOUT_SYMBOLS_5MX0_AB = ['VICI', 'ANGO', 'CPB', 'CYH', 'CDP', 'ELME', 'ASTL', 'TELL', 'AVTR', 'FULC', 'MRVI', 'PPC', 'COMM', 'UNIT', 'MAT']
 
 # BREAKOUT_SYMBOLS_5MX0_BB = ['MAX', 'MARA', 'GPRK', 'AM', 'ELAN', 'WKC', 'TPIC', 'BNS', 'INFN', 'MANU', 'ODD', 'PSEC', 'AMRX', 'TARS', 'INVH', 'MITT', 'CCO', 'HSII', 'SEM', 'FULT', 'PLRX', 'CLB', 'RYAM', 'MFC', 'CION', 'AR', 'SHOO', 'DRIP', 'WOW', 'RIVN', 'GNTX', 'ET', 'IVR', 'PAA', 'CVE', 'BKR', 'KDP', 'EBS', 'PPBI', 'PAGS', 'BBIO', 'TLS', 'PRME', 'MEG', 'ARKO', 'AAT', 'NCLH', 'GIL', 'KURA', 'BRCC', 'HUBG', 'RUN', 'MTG', 'TSEM', 'HSTM', 'CSWC', 'FL', 'OPRA', 'TELL', 'CALX', 'LUNR', 'HAL', 'MGY', 'RCM', 'LOCO', 'RSKD', 'OXLC', 'KN', 'VSAT', 'COMP', 'SGML', 'UPST', 'XFLT', 'OLMA', 'MNMD', 'DT', 'MAG', 'ACB', 'AVPT', 'AVNT', 'CPB', 'TRP', 'DX', 'IRBT', 'EQX', 'RKLB', 'AOSL', 'ITUB', 'OSCR', 'DBX', 'EPC', 'SPDN', 'UTG', 'PLL', 'CSTM', 'TRTX', 'BBAI', 'TNL', 'VICR', 'IGT', 'M', 'FHB', 'WSR', 'VYGR', 'KGC', 'MAMA', 'UPWK', 'GDOT', 'RWT', 'ASTH', 'HLF', 'LU', 'ZYME', 'LAZR', 'IP', 'EMLP', 'AXGN', 'ALTM', 'GMRE', 'MYGN', 'GPK', 'SBH', 'WOOF', 'UAA', 'RUM', 'TU', 'CGBD', 'PAM', 'LSPD', 'IART', 'PINS', 'BY', 'RWM', 'OGN', 'NR', 'FCPT', 'DNLI', 'WVE', 'SWI', 'ADTN', 'THS', 'SNDL', 'DOC', 'IPG', 'PAGP', 'TGTX', 'IMMR', 'BSAC', 'WT', 'FIP', 'HTLF', 'ARCC', 'APAM', 'DK', 'SPXS', 'CGAU']
