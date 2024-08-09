@@ -15,7 +15,7 @@ DB_USER = 'postgres'
 DB_PASS = 'password'
 DB_NAME = 'app'
 
-BREAKOUT_SYMBOLS_5MX0_AB = ['ELME', 'IMXI', 'MAT', 'VGR']
+BREAKOUT_SYMBOLS_5MX0_AB = ['ELME', 'MAT']
 
 # ['VGR', 'FULC', 'UNIT', 'CAG', 'PPC', 'MRVI', 'QDEL', 'CYH', 'NVCR', 'RERE', 'CPB', 'MAT', 'NWL', 'ASTL', 'ANGO', 'KHC', 'COMM', 'TELL', 'VICI', 'COUR', 'ELME', 'EQC', 'AVTR']
 
