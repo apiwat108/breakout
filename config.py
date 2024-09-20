@@ -6,7 +6,7 @@
 # Paper Account
 API_KEY = 'PKFPXIK488ZVOTTE62E0'
 SECRET_KEY = 'eKA6lLM0CGvfsA3LeoS65bgbX8VkiEdvlaOPvCM0'
-API_URL = 'https://paper-api.alpaca.markets/v2'
+API_URL = 'https://paper-api.alpaca.markets'
 
 
 HEADERS = {
