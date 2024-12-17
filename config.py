@@ -22,7 +22,7 @@ DB_USER = 'postgres'
 DB_PASS = 'password'
 DB_NAME = 'app'
 
-BREAKOUT_SYMBOLS_5MX0_AB =  ['RUM', 'TAC', 'AUPH', 'BB', 'QURE', 'NVCR', 'DDD', 'AAL', 'YMM', 'GRRR', 'FISI', 'TWI', 'ANGO', 'MGX', 'RNW', 'WBD', 'AUR', 'CMRX', 'HIMX', 'SSRM']
+BREAKOUT_SYMBOLS_5MX0_AB =  ['EOSE', 'RUM', 'TAC', 'AUPH', 'BB', 'QURE', 'NVCR', 'DDD', 'AAL', 'YMM', 'GRRR', 'FISI', 'TWI', 'ANGO', 'MGX', 'RNW', 'WBD', 'AUR', 'CMRX', 'HIMX', 'SSRM']
 
 # Already passed 60MX0 (10 Dec 2024)
 # ['GFAI', 'BARK', 'ASAN', 'PATH', 'GRRR', 'VUZI', 'RXRX', 'CRNC']
