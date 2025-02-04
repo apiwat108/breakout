@@ -22,4 +22,4 @@ DB_USER = 'postgres'
 DB_PASS = 'password'
 DB_NAME = 'app'
 
-BREAKOUT_SYMBOLS_5MX0_AB = ['PAGP', 'VERU', 'BTSG', 'TMC', 'VATE', 'BE', 'DCGO', 'DGHI', 'POWW', 'TRIP', 'SKYX', 'BKSY', 'RPRX', 'SDGR', 'ANGO', 'ABCL', 'INMB', 'FPH', 'NEXT', 'VSAT', 'SMMT']
+BREAKOUT_SYMBOLS_5MX0_AB = ['BTSG', 'SDGR', 'TRIP', 'BKSY']
