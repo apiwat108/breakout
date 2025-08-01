@@ -443,7 +443,7 @@ if clock.is_open:
                         if entry_d in trading_dates:
                             entry_idx = trading_dates.index(entry_d)
                             # Check if current_date is at least two trading days after entry_d
-                            if len(trading_dates) > entry_idx + 2 and current_date >= trading_dates[entry_idx + 2]:
+                            if len(trading_dates) > entry_idx + 3 and current_date >= trading_dates[entry_idx + 2]:
                                 print("Strategy 3: Exiting by timing (after 2 trading days)")
                                 place_sell_order(symbol, quantity)
                         else:
