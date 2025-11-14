@@ -1,12 +1,12 @@
-# Live Account
-API_KEY = 'AK9WJUKS418ZU6Y8LM66'
-SECRET_KEY = 'JBu0oIEfoUUSuMtu68XglUruZdDBPbzZdAhs8a2m'
-API_URL = 'https://api.alpaca.markets'
+# # Live Account
+# API_KEY = 'AK9WJUKS418ZU6Y8LM66'
+# SECRET_KEY = 'JBu0oIEfoUUSuMtu68XglUruZdDBPbzZdAhs8a2m'
+# API_URL = 'https://api.alpaca.markets'
 
-# # Paper Account 1
-# API_KEY = 'PKFPXIK488ZVOTTE62E0'
-# SECRET_KEY = 'eKA6lLM0CGvfsA3LeoS65bgbX8VkiEdvlaOPvCM0'
-# API_URL = 'https://paper-api.alpaca.markets'
+# Paper Account 1
+API_KEY = 'PKFPXIK488ZVOTTE62E0'
+SECRET_KEY = 'eKA6lLM0CGvfsA3LeoS65bgbX8VkiEdvlaOPvCM0'
+API_URL = 'https://paper-api.alpaca.markets'
 
 # # Paper Account 2
 # PAPER_ACCOUNT_2 = {
