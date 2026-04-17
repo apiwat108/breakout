@@ -99,4 +99,10 @@ MANUAL_BREAKOUT_ENTRIES = [
     {'symbol': 'KEEL', 'breakout_date': '2026-04-14', 'stop_loss': 2.4, 'entry_id': 55},
     {'symbol': 'BOLD', 'breakout_date': '2026-04-14', 'stop_loss': 1.4, 'entry_id': 56},
     {'symbol': 'SNAL', 'breakout_date': '2026-04-14', 'stop_loss': 0.75, 'entry_id': 57},
+    {'symbol': 'RUM', 'breakout_date': '2026-04-16', 'stop_loss': 5.65, 'entry_id': 58},
+    {'symbol': 'DARE', 'breakout_date': '2026-04-16', 'stop_loss': 1.9, 'entry_id': 59},
+    {'symbol': 'GRPN', 'breakout_date': '2026-04-16', 'stop_loss': 13.0, 'entry_id': 60},
+    {'symbol': 'NN', 'breakout_date': '2026-04-16', 'stop_loss': 18.45, 'entry_id': 61},
+    {'symbol': 'NVTS', 'breakout_date': '2026-04-16', 'stop_loss': 10.0, 'entry_id': 62},
+    {'symbol': 'BZUN', 'breakout_date': '2026-04-16', 'stop_loss': 2.65, 'entry_id': 63},
 ]
